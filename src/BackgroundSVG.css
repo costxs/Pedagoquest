@@ -1,0 +1,26 @@
+/* BackgroundSVG.css */
+.background-svg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Animação das nuvens */
+.clouds-container {
+    /* Faz o grupo de nuvens se mover da direita para a esquerda infinitamente */
+    animation: drift 60s linear infinite;
+}
+
+@keyframes drift {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        /* Move para a esquerda. O valor depende do tamanho do seu SVG viewbox */
+        transform: translateX(-1920px);
+    }
+}

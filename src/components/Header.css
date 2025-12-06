@@ -1,0 +1,66 @@
+/* Header.css - Versão mais compacta */
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Altura reduzida de 70px para 60px */
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    /* Padding lateral levemente reduzido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.header-title {
+    font-family: 'Arial Black', 'Arial Bold', sans-serif;
+    /* Fonte reduzida de 1.5rem para 1.3rem */
+    font-size: 1.3rem;
+    color: #3498db;
+    letter-spacing: 1px;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-icon {
+    /* Ícones reduzidos de 1.4rem para 1.2rem */
+    font-size: 1.2rem;
+    color: #b0c4de;
+}
+
+.start-icon {
+    color: #3498db;
+}
+
+.progress-bar-background {
+    /* Barra um pouco mais curta e fina */
+    width: 180px;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    /* Texto um pouco menor */
+    font-size: 0.85rem;
+    color: #777;
+    font-weight: bold;
+}

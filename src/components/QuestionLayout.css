@@ -1,0 +1,195 @@
+/* QuestionLayout.css */
+
+/* --- Estrutura Geral --- */
+.question-page-bg {
+    background-color: #f4f7f6;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Mudei de 'center' para 'flex-start' para que, se o conteúdo for muito alto,
+     ele comece do topo e permita rolar a página, em vez de ficar centralizado e cortar. */
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* ALTERAÇÃO IMPORTANTE: Ajuste do padding superior */
+    /* Novo cálculo: 60px (novo header) + 30px (respiro maior) = 90px */
+    padding-top: 90px;
+}
+
+/* O card branco principal */
+.main-question-card {
+    background-color: #ffffff;
+    width: 100%;
+    /* ALTERAÇÃO: Aumentei a largura máxima de 1100px para 1250px */
+    max-width: 1250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    /* Adicionei margin-bottom para garantir espaço no final da página ao rolar */
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+/* O container que coloca a imagem e o texto lado a lado */
+.content-flex-wrapper {
+    display: flex;
+    gap: 30px;
+    /* Espaço entre a coluna da imagem e a do texto */
+    align-items: flex-start;
+    /* Alinha os itens ao topo */
+}
+
+/* --- Coluna da Esquerda (Imagem) --- */
+.left-column-image {
+    /* Define um tamanho fixo para o contêiner da imagem */
+    flex: 0 0 400px;
+    /* Largura fixa de 400px (ajuste se achar muito grande/pequeno) */
+    height: 400px;
+    /* Altura fixa igual para criar um quadrado */
+
+    /* Centraliza a imagem dentro deste espaço */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Garante que não ultrapasse em telas menores */
+    max-width: 100%;
+
+    background-color: #f0f2f5;
+    /* Uma cor de fundo opcional enquanto carrega */
+    border-radius: 8px;
+    overflow: hidden;
+    /* Corta qualquer excesso */
+}
+
+/* A imagem em si */
+.scenario-image {
+    width: 100%;
+    height: 100%;
+    /* 'contain' faz a imagem inteira caber dentro do espaço sem cortar */
+    /* Se preferir que ela preencha tudo (cortando as bordas), use 'cover' */
+    object-fit: contain;
+    display: block;
+}
+
+/* --- Coluna da Direita (Conteúdo) --- */
+.right-column-content {
+    flex: 1;
+    /* Ocupa todo o espaço que sobrar */
+    display: flex;
+    flex-direction: column;
+    /* Adiciona um padding para garantir que o texto não cole na imagem */
+    padding-left: 20px;
+}
+
+.question-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.question-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.options-header {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* --- Estilo das Alternativas (Igual à referência) --- */
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* Espaço entre os cartões de opção */
+}
+
+/* O botão inteiro da alternativa */
+.option-card {
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente o texto com a letra */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    /* Borda cinza sutil */
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+/* Efeito ao passar o mouse na alternativa */
+.option-card:hover {
+    border-color: #a0c0ff;
+    /* Borda fica azulzinha */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    /* Levanta um pouquinho */
+}
+
+/* O container da letra (A, B, C, D) */
+.option-label-container {
+    flex-shrink: 0;
+    /* Garante que não amasse */
+    width: 40px;
+    height: 40px;
+    background-color: #eef4ff;
+    /* Fundo azul bem claro, como na imagem */
+    border-radius: 50%;
+    /* Faz ficar redondo (use 8px para quadrado arredondado) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    /* Espaço entre a letra e o texto */
+}
+
+/* O texto da letra em si */
+.option-label {
+    font-weight: bold;
+    color: #007bff;
+    /* Cor azul para a letra */
+    font-size: 1.1rem;
+}
+
+/* O texto da resposta */
+.option-text {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .content-flex-wrapper {
+        flex-direction: column;
+    }
+
+    .left-column-image {
+        /* No celular, a imagem pode ocupar a largura total */
+        flex: auto;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        /* Altura automática para manter proporção */
+        max-height: 300px;
+        /* Mas limita a altura para não ocupar a tela toda */
+        margin-bottom: 20px;
+    }
+
+    .right-column-content {
+        padding-left: 0;
+        /* Remove o padding lateral no mobile */
+    }
+}
