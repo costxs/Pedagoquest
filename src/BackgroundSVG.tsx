@@ -9,7 +9,7 @@ const BackgroundSVG: React.FC = () => {
             preserveAspectRatio="xMidYMid slice"
             className="background-svg-container"
         >
-            <image href="/assets/background_new.jpg" x="0" y="0" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" />
+            <image href={`${import.meta.env.BASE_URL}assets/background_new.jpg`} x="0" y="0" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" />
         </svg>
     );
 };

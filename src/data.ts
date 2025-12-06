@@ -21,7 +21,7 @@ export const questions: Question[] = [
         id: 1,
         title: "Situação: O Planejamento",
         description: "Você senta para planejar sua aula de História. O que você prioriza ao selecionar o material?",
-        imageUrl: "/assets/question1.jpg", // Placeholder de planejamento
+        imageUrl: `${import.meta.env.BASE_URL}assets/question1.jpg`, // Placeholder de planejamento
         options: [
             {
                 id: 'A',
@@ -49,7 +49,7 @@ export const questions: Question[] = [
         id: 2,
         title: "Situação: Indisciplina",
         description: "Durante uma atividade em grupo, a turma começa a apresentar comportamento inadequado, com alunos conversando alto, se levantando sem permissão e não focando na tarefa proposta. A situação está saindo do controle.",
-        imageUrl: "/assets/question2.jpg", // Placeholder de sala de aula
+        imageUrl: `${import.meta.env.BASE_URL}assets/question2.jpg`, // Placeholder de sala de aula
         options: [
             {
                 id: 'A',
@@ -77,7 +77,7 @@ export const questions: Question[] = [
         id: 3,
         title: "Situação: Relação Professor-Aluno",
         description: "Como você lida com a relação professor-aluno?",
-        imageUrl: "/assets/question3.jpg", // Imagem atualizada
+        imageUrl: `${import.meta.env.BASE_URL}assets/question3.jpg`, // Imagem atualizada
         options: [
             {
                 id: 'A',
@@ -105,7 +105,7 @@ export const questions: Question[] = [
         id: 4,
         title: "Situação: O Momento da Avaliação",
         description: "Chegou o final do bimestre e você precisa definir como será a avaliação principal da turma. Qual é a sua abordagem?",
-        imageUrl: "/assets/question4.jpg",
+        imageUrl: `${import.meta.env.BASE_URL}assets/question4.jpg`,
         options: [
             {
                 id: 'A',
@@ -133,7 +133,7 @@ export const questions: Question[] = [
         id: 5,
         title: "Situação: O Uso do Livro Didático",
         description: "A escola forneceu um livro didático padrão para sua disciplina. Como você o utiliza nas suas aulas?",
-        imageUrl: "/assets/question5.jpg",
+        imageUrl: `${import.meta.env.BASE_URL}assets/question5.jpg`,
         options: [
             {
                 id: 'A',
@@ -161,7 +161,7 @@ export const questions: Question[] = [
         id: 6,
         title: "Situação: O Erro do Aluno",
         description: "Durante uma explicação, você faz uma pergunta e um aluno dá uma resposta completamente errada baseada no senso comum. O que você faz?",
-        imageUrl: "/assets/question6.jpg",
+        imageUrl: `${import.meta.env.BASE_URL}assets/question6.jpg`,
         options: [
             {
                 id: 'A',
@@ -189,7 +189,7 @@ export const questions: Question[] = [
         id: 7,
         title: "Situação: Tecnologia na Sala de Aula",
         description: "A escola recebeu tablets novos. A direção quer que eles sejam usados. Como você integra essa tecnologia?",
-        imageUrl: "/assets/question7.jpg",
+        imageUrl: `${import.meta.env.BASE_URL}assets/question7.jpg`,
         options: [
             {
                 id: 'A',
@@ -217,7 +217,7 @@ export const questions: Question[] = [
         id: 8,
         title: "Situação: Uma Notícia Impactante",
         description: "Uma greve geral ou um evento político importante está acontecendo na cidade e os alunos estão agitados comentando sobre isso. Você tinha uma aula planejada sobre um conteúdo complexo. O que faz?",
-        imageUrl: "/assets/question8.jpg",
+        imageUrl: `${import.meta.env.BASE_URL}assets/question8.jpg`,
         options: [
             {
                 id: 'A',
@@ -245,7 +245,7 @@ export const questions: Question[] = [
         id: 9,
         title: "Situação: Reunião de Pais",
         description: "Numa reunião, um pai questiona qual é o objetivo principal das suas aulas. Qual é a sua resposta mais honesta (baseada na sua prática)?",
-        imageUrl: "/assets/question9.jpg",
+        imageUrl: `${import.meta.env.BASE_URL}assets/question9.jpg`,
         options: [
             {
                 id: 'A',
@@ -273,7 +273,7 @@ export const questions: Question[] = [
         id: 10,
         title: "Situação: Adaptação do Currículo",
         description: "Você percebe que o currículo oficial da sua matéria é muito extenso e distante da realidade dos seus alunos. O que você prioriza?",
-        imageUrl: "/assets/question10.jpg",
+        imageUrl: `${import.meta.env.BASE_URL}assets/question10.jpg`,
         options: [
             {
                 id: 'A',

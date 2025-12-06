@@ -16,7 +16,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ onStart }) => {
 
                 {/* A imagem da logo */}
                 <img
-                    src="/logo-full.png"
+                    src={`${import.meta.env.BASE_URL}logo-full.png`}
                     alt="Logo PedagoQuest: Livro com caminhos para escolas"
                     className="game-logo"
                 />
